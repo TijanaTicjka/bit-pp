@@ -1,6 +1,6 @@
 /* 1.Write a for loop that will iterate from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen. */
 
-for (var i = 0; i < 15; i++) {
+for (var i = 0; i < 16; i++) {
     if (i % 2 === 0) {
         console.log("even");
     } else {console.log("odd"); 
@@ -10,7 +10,7 @@ for (var i = 0; i < 15; i++) {
 // 2. Write a program to sum the multiples of 3 and 5 under 1000.
 
 var sum = 0;
-for (var i = 1; i < 1000; i++) {
+for (var i = 0; i < 1000; i++) {
     if (i % 3 === 0 || i % 5 === 0) {
         sum += i;
     }
@@ -111,7 +111,7 @@ console.log(grade);
 /* 8.Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead. When you have that working, modify your program to print "FizzBuzz" for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
 // Note: This is actually an interview question that has been claimed to weed out a significant percentage of programmer candidates. So if you’ve solved it, you’re now allowed to feel good about yourself. */
 
-for ( var i = 1; i < 100; i++) {
+for ( var i = 1; i < 101; i++) {
     if (i % 3 === 0 && i % 5 !== 0){
         console.log("Fizz");
     } else if (i % 5 === 0 && i % 3 !== 0) {
@@ -121,7 +121,7 @@ for ( var i = 1; i < 100; i++) {
 
 //Modified program
 
-for ( var i = 1; i < 100; i++) {
+for ( var i = 1; i < 101; i++) {
     if (i % 3 === 0 && i % 5 !== 0){
         console.log("Fizz");
     } else if (i % 5 === 0 && i % 3 !== 0) {
@@ -144,8 +144,9 @@ var e = 3;
 for (var i = 0; i < a.length; i++) {
     if (a[i]===e){
         console.log("Yes");
+        break;
     };
-} //This solution will show "Yes" every time when program will find number 3 in array.
+} 
 
 var a = [5, -4.2, 18, 7];
 var e = 3;
@@ -180,14 +181,16 @@ Output: -1, 3 */
 var array1 = [4, 2 ,2 , -1, 6];
 
 var min = array1[0];
+var index = array1[0];
 
 for (var i = 0; i < array1.length; i++) {
     if (min > array1[i]) {
         min = array1[i];
+        index = i;
     }
     
 }
-console.log(min);  
+console.log(min, index);  
 
 /* 4. Write a program that finds the first element larger than minimum and prints out its value.
 Input array: [4, 2, 2, -1, 6]
@@ -336,10 +339,3 @@ for (var i = 0; i < a.length; i++) {
     
 } 
 console.log(newarr);
-
-
-
-
-
-
-
