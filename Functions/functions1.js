@@ -6,11 +6,13 @@ function calculateMaximum(a, b) {
       result = a;
     } else if (b > a) {
       result = b;
-    } 
+    } else {
+        result = "Numbers are equel"
+    }
     return result;
 }
 
- var c = calculateMaximum(3,33);
+ var c = calculateMaximum(3,3);
 
 console.log(c);
 
