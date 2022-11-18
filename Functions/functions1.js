@@ -12,7 +12,7 @@ function calculateMaximum(a, b) {
     return result;
 }
 
- var c = calculateMaximum(3,3);
+var c = calculateMaximum(3,3);
 
 console.log(c);
 
@@ -41,7 +41,6 @@ function isThreeDigitNumber(n) {
     }
 
     return digit;
-    
 }
 
 console.log(isThreeDigitNumber(333));
@@ -49,18 +48,10 @@ console.log(isThreeDigitNumber(333));
 //4.Whrite a program that calculates an arithmetic mean of four numbers.
 
 function calculateArtithmeticOfNumbers(num1, num2, num3, num4) {
-
-/* var num1 = 9;
-var num2 = 10;
-var num3 = "mmmmm";
-var num4 = 15;
-var t = (num1 + num2 + num3 + num4)/ 4;
- */
-
-if (isFinite(num1) && isFinite(num2) && isFinite(num3) &&  isFinite(num4) === true /*&& typeof(num1) && typeof(num2) && typeof(num3) && typeof(num4)!== "string"*/) {
-    var arithmetic = (num1 + num2 + num3 + num4)/ 4;
-} else {
-    var arithmetic = "All inputs must be numbers"; 
+    if (isFinite(num1) && isFinite(num2) && isFinite(num3) &&  isFinite(num4)) {
+        var arithmetic = (num1 + num2 + num3 + num4)/ 4;
+    } else {
+        var arithmetic = "All inputs must be numbers"; 
     }
 
     return arithmetic;
@@ -76,21 +67,16 @@ var digits = arrayNum.length;
 console.log(digits); */
 
 function calculateNumberOfDigits(t) {
-
-if (isFinite(t) === false ) {
-    var digits = "Input must be number";
-    
-} else {
-    var digits = ("" + t).length;
-     
-}
-return digits;
-
+    if (isFinite(t) === false ) {
+        var digits = "Input must be number";
+    } else {
+        var digits = ("" + t).length;
+    }
+    return digits;
 }
 
 console.log(calculateNumberOfDigits(5)); 
  
-
 /* 8.Write a program that calculates a number of appearances of a given number in a
 given array.
 Inputs: a = [2, 4, 7, 8, 7, 7, 1], e = 7
@@ -117,10 +103,10 @@ function calculateNumberOfAppearancesInArray(a, e) {
         }
     }
     return result;
-
 }
 
 console.log(calculateNumberOfAppearancesInArray([44], 4));
+
 //How to make condition for parammetar to be array?
 
 //9. Write a program that calculates the sum of odd elements of a given array.
@@ -137,15 +123,13 @@ for (var i = 0; i < a1.length; i++) {
 console.log(odd); */
 
 function checkSumOfOddNumbersInArray(a1) {
-
     var odd = 0;
     for (var i = 0; i < a1.length; i++) {
         if (a1[i] % 2 === 0) {
             odd += a1[i]
         }
     }
-    return odd;
-    
+    return odd; 
 }
 
 console.log(checkSumOfOddNumbersInArray([346]));//How to make condition for parammetar to be array?
@@ -166,14 +150,13 @@ console.log(num); */
 
 function calculateLetterA(some) {
     if (typeof(some) !== "string") {
-        console.log("Input must be some string");
+        return "Input must be some string";
     } 
     var num = 0;
-
     for (var i =0; i < some.length; i++) {
-    if (some[i] === "a") {
-        num += 1;
-       }
+        if (some[i] === "a") {
+            num += 1;
+        }
     }
     return num;
 }
@@ -184,19 +167,18 @@ console.log(calculateLetterA("66aA"));
 
 function calculateLetterAa(some$) {
     if (typeof(some$) !== "string") {
-        console.log("Input must be some string");
+        return "Input must be some string";
     } 
     var num$ = 0;
-
     for (var i =0; i < some$.length; i++) {
-    if (some$[i] === "a" || some$[i] === "A") {
-        num$ += 1;
-       }
+        if (some$[i] === "a" || some$[i] === "A") {
+            num$ += 1;
+        }
     }
     return num$;
 }
 
-console.log(calculateLetterAa("66aA"));
+console.log(calculateLetterAa(7));
 
 /*11. Write a program that concatenates a given string given number of times. For example, if “abc” and 4 are given values, the program prints out abcabcabcabc.*/
 
@@ -213,18 +195,18 @@ console.log(r); */
 
 function concantanateString(somestring, value) {
     if (typeof(somestring) !== "string" || isFinite(value) === false) {
-        console.log("Invalid input");
+        return "Invalid input";
     }
-        var r = "";
-
-        for (var i = 0; i < value; i++) {
-            r += somestring;
-        }
-
-        return r;
+    var r = "";
+    for (var i = 0; i < value; i++) {
+        r += somestring;
+    }
+    return r;
 }
 
-    console.log(concantanateString("ttt", "k"));
+console.log(concantanateString("ttt", "k"));
+
+ 
 
 
 
