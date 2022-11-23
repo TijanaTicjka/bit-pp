@@ -72,11 +72,30 @@ function makeDigitsArray(num) {
 var a3 = makeDigitsArray(555);
 console.log(a3);
 
-// 5. Write a program that prints a multiplication table for numbers up to 12.***
+// 5. Write a program that prints a multiplication table for numbers up to 12.
+
+function printMultiplicationTable(a) {
+    var table = "";
+    for (var i = 1; i <= 12; i++) {
+        table += a + " * " +i + " = " + a *i + "\n";
+    }
+    return table;
+}
+
+var a4 = printMultiplicationTable(2);
+console.log(a4);
 
 // 6. Write a function to input temperature in Centigrade and convert to Fahrenheit.
 
-/* 7. Write a function to find the maximum element in array of numbers. Filter out all non-number elements. */
+function convertToFahrenheit(tC) {
+    var tF = (9 * (parseFloat(tC))/5) + 32;
+    return tF + " °F";
+}
+
+var a5 = convertToFahrenheit("21°C");
+console.log(a5);
+
+// 7. Write a function to find the maximum element in array of numbers. Filter out all non-number elements. 
 
 function findMaxAndFilter(arr$) {
     var maximum = arr$[0];
@@ -100,7 +119,7 @@ console.log(a6);
 function findMaxMin(array$) {
     var min = array$[0];
     var max = array$[1]; 
-    var minMax = [min, max];
+    var minMax = [max, min];
     for (i = 0; i < array$.length; i++) {
         if (array$[i] < min) {
             min = array$[i];
@@ -108,17 +127,99 @@ function findMaxMin(array$) {
             max = array$[i];
         }
     }
-    minMax = [min, max];
+    minMax = [max, min];
     return minMax;
 }
 
+var a7 = findMaxMin([1, 5, 8]);
+console.log(a7);
+
 // 9. Write a function to find the median element of array.
+
+function findMedianElement(someArrayA) {
+    var median = 0;
+    if(someArrayA.length % 2 !== 0) {
+        median = someArrayA[(someArrayA.length-1)/2];
+    } else {
+        median = (someArrayA[someArrayA.length/2] + someArrayA[(someArrayA.length/2)-1])/2;
+    }
+
+    return median;
+}
+
+var a8 = findMedianElement([2,3,4,5]);
+console.log(a8);
 
 // 10. Write a function to find the element that occurs most frequently.
 
-/* 11. Write a function to find and return the first, middle and last element of an array if the array has odd number of elements. If number of elements is even, return just the first and the last. In other cases (empty array), input array should be returned.
+function convertToFahrenheit(tC) {
+    var tF = (9 * (parseFloat(tC))/5) + 32;
+    return tF + " °F";
+}
 
-/* 12. Write a function to find the average of N elements. Make the function flexible to receive dynamic number or parameters. */// What is dinamic number?
+var a5 = convertToFahrenheit("21°C");
+console.log(a5);
+
+
+
+// 10. Write a function to find the element that occurs most frequently. 
+
+function findMostFrequentlyElement (someArray) {
+    var counter = 0;
+    var counter1 = 0;
+    var arrayF = [counter1];
+    for (var i = 0; i < someArray.length; i++){
+        for (var j = 0; j < someArray.length; j++) {
+            if (someArray[i] === someArray[j]) {
+                counter += 1;
+            }
+        }
+        if (counter > counter1 ) {
+            arrayF[arrayF.length-1] = someArray[i];
+            counter1 = counter;
+        } else if ( counter === counter1) {
+            arrayF[arrayF.length] = someArray[i];
+            for (var k = 0; k < arrayF.length-1; k++) {
+                if(someArray[i] === arrayF[k]) {
+                    arrayF.length --;
+                } 
+            }
+        }
+        counter = 0;
+    }
+    return arrayF;
+}
+
+var a9 = findMostFrequentlyElement ([ 3, 3, 5, 5, 5, 6, 6, 5, 6, 3, 3]); 
+console.log(a9);
+
+/* 11. Write a function to find and return the first, middle and last element of an array if the array has odd number of elements. If number of elements is even, return just the first and the last. In other cases (empty array), input array should be returned. */
+
+function findAndReturn (arrayA) {
+    if(arrayA.length % 2 !== 0 ) {
+        return [arrayA[0], arrayA[(arrayA.length-1)/2], arrayA[arrayA.length-1]];
+    } else if (arrayA.length %2 === 0 && arrayA.length !== 0) {
+        return [arrayA[0], arrayA[arrayA.length-1]];
+    } else {
+        return arrayA;
+    }
+}
+
+var a10 = findAndReturn([1, 2, 3, 4, 5]);
+console.log(a10);
+
+// 12. Write a function to find the average of N elements. Make the function flexible to receive dynamic number or parameters. 
+
+function findAverage() {
+    var average = 0;
+    for (var i = 0; i < arguments.length; i++) {
+        average = (average + arguments[i]);
+    }
+    average = average/arguments.length;
+    return average;
+}
+var a11 = findAverage (2, 3, 4);
+console.log(a11);
 
 // 13. Write a function to find all the numbers greater than the average.
 
@@ -190,3 +291,4 @@ For example the list [&quot;Hello&quot;, &quot;World&quot;, &quot;in&quot;, &quo
 * frame *
 
 *********   */
+
