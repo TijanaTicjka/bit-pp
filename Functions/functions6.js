@@ -150,18 +150,6 @@ function findMedianElement(someArrayA) {
 var a8 = findMedianElement([2,3,4,5]);
 console.log(a8);
 
-// 10. Write a function to find the element that occurs most frequently.
-
-function convertToFahrenheit(tC) {
-    var tF = (9 * (parseFloat(tC))/5) + 32;
-    return tF + " °F";
-}
-
-var a5 = convertToFahrenheit("21°C");
-console.log(a5);
-
-
-
 // 10. Write a function to find the element that occurs most frequently. 
 
 function findMostFrequentlyElement (someArray) {
@@ -281,7 +269,7 @@ function calculateBMI(weight, height) {
 var a13 = calculateBMI(53, 1.64);
 console.log(a13);
 
-/*15. Write a function that takes a list of strings and prints them, one per line, in a rectangularframe.:
+/* 15. Write a function that takes a list of strings and prints them, one per line, in a rectangularframe.:
 For example the list [&quot;Hello&quot;, &quot;World&quot;, &quot;in&quot;, &quot;a&quot;, &quot;frame&quot;] gets printed as:
 *********
 * Hello *
@@ -292,3 +280,21 @@ For example the list [&quot;Hello&quot;, &quot;World&quot;, &quot;in&quot;, &quo
 
 *********   */
 
+function printInFrame(arrayForFrame) {
+    var stars = "";
+    for (var i = 0; i < (arrayForFrame[0].length + 4); i++) {
+        stars += "*"; ;
+    }
+    console.log(stars);
+    stars = "";
+    for (var i = 0; i < arrayForFrame.length; i++) {
+        console.log("* " + arrayForFrame[i] + " *");
+    }
+    for (var i = 0; i < (arrayForFrame[arrayForFrame.length-1].length + 4); i++) {
+        stars += "*";
+    }
+    return stars;
+}
+
+var a14 = printInFrame(["Hello", "World" , "in" , "a" , "frame"]);
+console.log(a14);
