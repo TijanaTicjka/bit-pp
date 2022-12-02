@@ -1,3 +1,5 @@
+"use strict";
+
 /* 1. Write a function to count vowels in a provided string. Vowels are a, e, i, o, and u as well as A,
 E, I, O, and U. */
 
@@ -120,7 +122,7 @@ function findMaxMin(array$) {
     var min = array$[0];
     var max = array$[1]; 
     var minMax = [max, min];
-    for (i = 0; i < array$.length; i++) {
+    for (var i = 0; i < array$.length; i++) {
         if (array$[i] < min) {
             min = array$[i];
         } else if (array$[i] > max) {
@@ -274,27 +276,9 @@ For example the list [&quot;Hello&quot;, &quot;World&quot;, &quot;in&quot;, &quo
 *********
 * Hello *
 * World *
-* in *
-* a *
+* in    *
+* a     *
 * frame *
-
 *********   */
 
-function printInFrame(arrayForFrame) {
-    var stars = "";
-    for (var i = 0; i < (arrayForFrame[0].length + 4); i++) {
-        stars += "*"; ;
-    }
-    console.log(stars);
-    stars = "";
-    for (var i = 0; i < arrayForFrame.length; i++) {
-        console.log("* " + arrayForFrame[i] + " *");
-    }
-    for (var i = 0; i < (arrayForFrame[arrayForFrame.length-1].length + 4); i++) {
-        stars += "*";
-    }
-    return stars;
-}
 
-var a14 = printInFrame(["Hello", "World" , "in" , "a" , "frame"]);
-console.log(a14);
