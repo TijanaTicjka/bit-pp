@@ -1,3 +1,5 @@
+"use strict";
+
 /* 1. Why pay a fortune teller when you can just program your fortune yourself?
 Write a function named tellFortune that:
 ● takes 4 arguments: number of children, partner's name, geographic location, job title.
@@ -46,7 +48,7 @@ function calculateDogAge(dogAge, rate) {
     return "Your doggie is " + hDogAge + " years old in dog years!";
 }
 
-a2$ = calculateDogAge(3,7);
+var a2$ = calculateDogAge(3,7);
 console.log(a2$);
 
 /* 3. Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no more!
