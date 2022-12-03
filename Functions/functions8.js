@@ -60,8 +60,6 @@ console.log(email);
 Input: 034
 Output: 28 */ 
 
-//Does Visual Studio automatically convert octal numbers to digital?
-
 function calculateDecimalValue(octalNumber) {
     var decimalNumber = 0;
     var newNum = 0;
@@ -117,12 +115,12 @@ given by the callback function.
 Input: [2, 8, 11, 4, 9, 3], callback function checks if the number is odd
 Output: [11, 9, 3] */
 
-function isOdd(e) {
-    if (e % 2 !== 0){
+function isOdd(e) {return e % 2 !== 0}
+/*     if (e % 2 !== 0){
         return e;
     }
 };
-  
+   */
 function filterElements(arr, cb) {
     var newArr = [];
     for (var i = 0; i < arr.length; i++) {
