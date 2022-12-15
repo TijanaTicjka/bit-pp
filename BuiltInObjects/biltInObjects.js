@@ -4,7 +4,7 @@
 Input: [2, 4, 7, 11, -2, 1]
 Output: [2, 2, 4, 4, 7, 7, 11, 11, -2, -2, 1, 1] */
 
-var duplicatesElement = (function (arr) {
+var duplicatesElement = (function(arr) {
     var newarr = [];
     for (var i = 0; i < arr.length; i++) {
         newarr.push(arr[i]); //newarr[newarr.length]
@@ -34,7 +34,7 @@ function checkNumOfElements(b) {
 
 var isOdd = (function(array, cb) {
     var l = array.length;
-    var answer = checkNumOfElements(l);
+    var answer = cb(l);
     return answer;
 })([1, 2, 9, 2, 1],checkNumOfElements)
 
@@ -91,7 +91,7 @@ var findSmallest =(function(arr2, cb) {
     //console.log(t);
     var p = t.lastIndexOf(min);
     //console.log(p);
-    return new Smallest (min, p);
+    return new cb(min, p);
 })([1, 4, -2, 11, 8, 1, -2, 3],Smallest);
 
 console.log(findSmallest);
@@ -130,7 +130,7 @@ var findEllements = (function(array$,cb,string) {
     var e1 = "";
     for (var i = 0; i < array$.length; i++) {
         e = array$[i];
-        e1 = toCaseInsensitive(e);
+        e1 = cb(e);
         if (e1.indexOf(string) === 0) {
             newArr.push(array$[i]);
         }
@@ -182,7 +182,6 @@ stringValidator, passwordValidator, colorValidator, and yearValidator referencin
 the functions from a) to d). */
 
 /* 8. Write a function that calculates a number of days to your birthday.
-
 Input: 25 February
 Output: 5 days */
 
@@ -217,7 +216,7 @@ var arrival = {
     s:22
 }
 
-console.log(tripTime(departure, arrival, function Time (hours,minutes,seconds){
+console.log(tripTime(departure, arrival, function Time(hours,minutes,seconds){
     this.hours = hours,
     this.minutes = minutes,
     this.seconds = seconds
@@ -236,7 +235,7 @@ function Points (x, y, z) {
 var t = new Points(3, 5, 1);
 console.log(t);
 
-/* b. Write a function that calculates the distance between two points in the space. */
+// b. Write a function that calculates the distance between two points in the space.
 
 function calculateDistance(point1, point2) {
     var dx = point2.x - point1.x;
@@ -245,7 +244,7 @@ function calculateDistance(point1, point2) {
     return Math.sqrt(dx * dx + dy * dy + dz * dz);
   }
 
-var o = distance ({ x: 1, y: 2, z: 3 },{ x: 4, y: 5, z: 6 });
+var o = distance({ x: 1, y: 2, z: 3 },{ x: 4, y: 5, z: 6 });
 console.log(o);
 
 /* 11.
@@ -255,6 +254,5 @@ c. Write a function which expects a number and a callback generator function and
 returns an array of numbers produced by the generator function. */
 
 /* 12. Write a function that shuffles the elements of a given array.
-
 Input: [3, 6, 11, 2, 9, 1]
 Output: [6, 2, 9, 1, 3, 11] (it can be any random permutation of the given array) */
