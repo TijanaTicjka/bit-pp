@@ -1,3 +1,4 @@
+"use strict"
 /* Try to use built-in object methods to solve some of the problems here
 
 1. Write a functional expression that duplicates each element of a given array.
@@ -18,6 +19,18 @@ console.log(duplicatesElement);
 /* 2. Write a functional expression that removes all duplicates in a given array.
 Input: [8, 13, 8, 9, 12, 8, 1, 1, 4, 13]
 Output: [1, 4, 8, 9, 12, 13] !*/ 
+
+var removeDuplicates = (function(array) {
+    var newArray = [];
+    for (var i = 0; i < array.length; i++) {
+        if (newArray.indexOf(array[i]) === -1) {
+            newArray.push(array[i])
+        }
+    }
+    return newArray.sort(function(a, b) {return a-b});
+})(([8, 13, 8, 9, 12, 8, 1, 1, 4, 13]));
+   
+console.log(removeDuplicates);
 
 /* 3.
 a. Write a function that checks if a given array has odd number of elements.
@@ -172,18 +185,76 @@ d. Write a function that prints out the name of the most expensive product on yo
 shopping list. Write the name in uppercase. */
 
 /* 7.
-a. Write a function that checks if a given string is written in all capitals.
-b. Write a function that checks if a given string contains any digits.
-c. Write a function that checks if a given string is a valid hexadecimal color.
-d. Write a function that checks if a given number belongs to the interval from 1900
-to 2018.
-e. Write a function named validator that returns an object with properties
+a. Write a function that checks if a given string is written in all capitals. */
+
+var capitals = (function(string){
+    if(string.toUpperCase() === string){
+        return "It's wrriten in all capitals";
+    } else {
+        return "It isn't wrriten in all capitals";
+    }
+})("TIJANA");
+
+console.log(capitals);
+
+// b. Write a function that checks if a given string contains any digits.
+
+var anyDigits = (function(string$) {
+    var answer = "";
+    var a = "";
+    for (var i = 0; i < string$.length; i++) {
+        a = string$[i];
+        if(isFinite(a)){
+            answer = "Digit is founded";
+            //console.log(a);
+            break;
+        } else {
+            answer = "There is no any digit";
+        }
+    }
+    return answer;
+})("SomestringWhithtext");
+
+console.log(anyDigits);
+
+// c. Write a function that checks if a given string is a valid hexadecimal color.
+
+// d. Write a function that checks if a given number belongs to the interval from 1900 to 2018.
+/* e. Write a function named validator that returns an object with properties
 stringValidator, passwordValidator, colorValidator, and yearValidator referencing
 the functions from a) to d). */
 
 /* 8. Write a function that calculates a number of days to your birthday.
 Input: 25 February
 Output: 5 days */
+
+// var calculateDaysToBirthday = (function(birthday) {
+//     var birthdayDate = new Date (birthday);
+//     //console.log(birthdayDate);
+//     var today = new Date;
+//     var t = today.getTime();
+//     //console.log(t);
+//     //console.log(today);
+//     var bD = birthdayDate.getTime();
+//     //console.log(bD);
+//     var days = (bD - t)/1000/60/60/24;
+//     return days;
+
+// })("20 December 2023");
+
+// console.log(calculateDaysToBirthday);
+
+function calculateDaysToBirthday(a) {
+    var a1 = Date.parse(a);
+    var today = Date.parse (new Date());
+    var days = (a1 - today)/1000/60/60/24;
+    return days;
+}
+
+var result = calculateDaysToBirthday("13 March 2023")
+console.log(result);
+
+//How to solve when input for birthday is without year and get rounded number of days?
 
 /* 9. Write a function that for a given departure and arrival time calculates the time the trip
 takes.
@@ -248,9 +319,29 @@ var o = distance({ x: 1, y: 2, z: 3 },{ x: 4, y: 5, z: 6 });
 console.log(o);
 
 /* 11.
-a. Write a function that generates a random integer value between 5 and 20.
-b. Write a function that generates a random integer value between 50 and 100.
-c. Write a function which expects a number and a callback generator function and
+a. Write a function that generates a random integer value between 5 and 20. */
+
+var randomNumber = (function(min, max) {
+    var r = (max - min) * Math.random() + min;
+    console.log(r);
+    //console.log(Math.round(17.25368342424801), Math.floor(17.25368342424801), Math.ceil(17.25368342424801));
+    return Math.ceil(r); 
+})(5, 20);
+
+console.log(randomNumber);
+
+// b. Write a function that generates a random integer value between 50 and 100.
+
+var randomNumber1 = (function(min, max) {
+    var r = (max - min) * Math.random() + min;
+    console.log(r);
+    //console.log(Math.round(17.25368342424801), Math.floor(17.25368342424801), Math.ceil(17.25368342424801));
+    return Math.ceil(r); 
+})(50, 100);
+
+console.log(randomNumber1);
+
+/* c. Write a function which expects a number and a callback generator function and
 returns an array of numbers produced by the generator function. */
 
 /* 12. Write a function that shuffles the elements of a given array.
