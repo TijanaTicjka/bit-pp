@@ -41,7 +41,7 @@ Employee.prototype.increaseSalary = function () {
 
 // Inheritance methods
 Employee.prototype = Object.create(Person.prototype);
-//Overwrite
+// Overwrite
 Employee.prototype.constructor = Person;
 
 function Developer (name, surname, job, salary, specialization) {
@@ -55,7 +55,7 @@ Developer.prototype.getSpecialization = function() {
 
 // Inheritance methods
 Developer.prototype = Object.create(Employee.prototype);
-//Overwrite
+// Overwrite
 Developer.prototype.constructor = Developer;
 
 function Manager (name, surname, job, salary, department) {
@@ -73,72 +73,92 @@ Manager.prototype.changeDepartment = function (value) {
 
 // Inheritance methods
 Manager.prototype = Object.create(Employee.prototype);
-//Overwrite
+// Overwrite
 Manager.prototype.constructor = Manager;
 
 /* Applications:
 1. Create constructor functions with properties representing the following:
 ○ WebApp: name, url, technologies, licence, stars
 ○ MobileApp: name, platforms, licence, stars */
+/* 2. All web applications should inherit methods:
+○ getData which prints out all the information
+○ reactBased which checks if one of the used technologies is React */
+/* 3. All mobile applications should inherit methods:
+○ getData which prints out all the informations
+○ forAndroid which checks if one of the platforms the application is developed for is Android */
+/* 4. Both web and mobile applications should inherit methods:
+○ isCCLicence which checks if the licence of the application is CC (Creative Commons)
+○ like which increases the number of stars by one */
 
 function App(name, licence, stars) {
     this.name = name;
     this.licence = licence;
     this.stars = stars;
+} 
+App.prototype.getInfo = function() {
+    return(this.name + " " + this.licence + " " + this.stars);
 }
 
-function WebApp(name, url, technologies, licence, stars) {
+App.prototype.isCCLicence = function () {
+    return this.licence === "CC";
+}
+
+App.prototype.like = function () {
+    return this.stars + 1;
+}
+
+// var test = new App("KFC", "BB", 2);
+// console.log(test);
+// console.log(test.getInfo());
+// console.log(test.isCCLicence());
+// console.log(test.like());
+
+function WebApp(name, licence, stars, url, technologies, ) {
     App.call(this, name, licence, stars);
     this.url = url;
     this.technologies = technologies;
 }
-   
 WebApp.prototype = Object.create(App.prototype);
+
 WebApp.prototype.constructor = WebApp;
 
-function MobileApp(name, platforms, licence, stars) {
+WebApp.prototype.reactBased = function () {
+    return this.technologies === "React";
+}
+
+WebApp.prototype.getData = function () {
+    var info = this.getInfo() + " " +  this.url + " " + this.technologies;
+    console.log(info);
+}
+
+// var test = new WebApp("KFC", "CC", 3,"https://kfc.rs/", "React" );
+// console.log(test);
+// console.log(test.reactBased());
+// console.log(test.isCCLicence());
+// console.log(test.like());
+// test.getData();
+
+function MobileApp(name, licence, stars, platforms) {
     App.call(this, name, licence, stars);
     this.platforms = platforms;
 }
-
 MobileApp.prototype = Object.create(App.prototype);
+
 MobileApp.prototype.constructor = MobileApp;
 
-/* 2. All web applications should inherit methods:
-○ getData which prints out all the information
-○ reactBased which checks if one of the used technologies is React */
-
-WebApp.prototype.getDate = function () {
-    console.log(this.name + " " + this.url + " " + this.technologies + " " + this.licence + " " + this.stars);
+MobileApp.prototype.forAndroid = function name() {
+    return this.platforms === "Android";
 }
-
-WebApp.prototype.reactBased = function () { return this.technologies === "React";}
-
-/* 3. All mobile applications should inherit methods:
-○ getData which prints out all the informations
-○ forAndroid which checks if one of the platforms the application is developed for is Android */
 
 MobileApp.prototype.getData = function () {
-    console.log(this.name + " " + this. platforms + " " + this.licence + " " + this.stars);
+    var information = this.getInfo();
+    console.log(information + " " + this.platforms);
 }
 
-MobileApp.prototype.forAndroid = function () { return this.platforms === "Android";}
-
-/* 4. Both web and mobile applications should inherit methods:
-○ isCCLicence which checks if the licence of the application is CC (Creative Commons)
-○ like which increases the number of stars by one */
-
-WebApp.prototype.isCCLicence = function () {return this.licence === "CC"};
-WebApp.prototype.like = function () {return this.stars + 1};
-
-MobileApp.prototype = Object.create(WebApp.prototype);
-MobileApp.prototype.constructor = MobileApp;
-    
-//var web = new WebApp("BIT", "https://www.bgit.rs/en/","React","CC",3)
-//console.log(web);
-// var test = web.like();
-// console.log(test);
-var mob = new MobileApp("KFC", "Android", "CC", 33);
+var mob = new MobileApp("KFC","CC", 33, "Android");
 var test = mob.like();
+console.log(mob);
 console.log(test);
+console.log(mob.isCCLicence());
+mob.getData(); 
     
