@@ -42,7 +42,7 @@ Employee.prototype.increaseSalary = function () {
 // Inheritance methods
 Employee.prototype = Object.create(Person.prototype);
 // Overwrite
-Employee.prototype.constructor = Person;
+Employee.prototype.constructor = Employee;
 
 function Developer (name, surname, job, salary, specialization) {
     Employee.call(this, name, surname, job, salary);
@@ -131,12 +131,12 @@ WebApp.prototype.getData = function () {
     console.log(info);
 }
 
-// var test = new WebApp("KFC", "CC", 3,"https://kfc.rs/", "React" );
-// console.log(test);
-// console.log(test.reactBased());
-// console.log(test.isCCLicence());
-// console.log(test.like());
-// test.getData();
+var test = new WebApp("KFC", "CC", 3,"https://kfc.rs/", "React" );
+console.log(test);
+console.log(test.reactBased());
+console.log(test.isCCLicence());
+console.log(test.like());
+test.getData();
 
 function MobileApp(name, licence, stars, platforms) {
     App.call(this, name, licence, stars);
