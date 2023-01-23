@@ -1,0 +1,43 @@
+.main{
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid black;
+    padding: 10px;
+
+}
+
+form{
+    border: 1px solid black;
+}
+h1{
+    text-align: center;
+}
+label{
+    display: block;
+    padding: 10px;
+}
+input{
+    display: block;
+    width: 97%;
+    margin-left: 10px; 
+}
+.create{
+    background-color: green;
+    color: white;
+    border-style: none;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    width: 98%;
+    padding: 7px;
+
+}
+select{
+    margin-left: 10px;
+    padding: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 98%;
+    background-color: whitesmoke;
+    border-style: none;
+    
+}
