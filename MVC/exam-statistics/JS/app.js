@@ -1,3 +1,5 @@
+"use strict";
+
 /* In app.js file:
 ● Declare all necessary variables for managing passed and failed
 exams as well as their statistics.
@@ -11,5 +13,7 @@ var listF = document.querySelector(".result-message-f")
 var numberOfPassed = document.querySelector(".number");
 var numberOfFalled = document.querySelector(".number1");
 var procentageOfFalled = document.querySelector(".procentage1")
+var errorMessage = document.querySelector(".error");
 
-add.addEventListener("click",collectDate)
+add.addEventListener("click",collectDate);
+add.addEventListener("click",updateStatistic);

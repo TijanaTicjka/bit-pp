@@ -1,5 +1,7 @@
+"use strict";
+
 class Subject {
-    constructor(sub){
+    constructor(subject){
         this.subject = subject;
     }
     getSubjectName(){

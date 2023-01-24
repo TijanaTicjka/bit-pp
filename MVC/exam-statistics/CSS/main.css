@@ -107,6 +107,7 @@ form{
     justify-content: center;
     flex-direction: column;
     color: white;
+    margin-right: 17%;
 }
 .counterF{
     display: flex;
@@ -120,4 +121,19 @@ form{
     flex-direction: column;
     color: white;
 }
-
+.procentage2{
+    height:10px;
+    font-size: 12px;
+    padding: 4px;
+    margin-top: 15px;
+    background-color: lightpink;
+    border: 1px solid pink;
+    border-radius: 4px;
+    color: white;
+}
+.error{
+    color: tomato;
+    margin: 0 auto;
+    width: 80%;
+    font-weight: bold;
+}

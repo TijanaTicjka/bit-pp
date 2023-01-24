@@ -1,3 +1,5 @@
+"use strict";
+
 class Exam {
     constructor(sub, student, grade){
         this.sub = sub;
@@ -13,7 +15,7 @@ class Exam {
         if(this.grade > 5) { 
             return "PASSED";
         } else {
-            return "FALLED"
+            return "FAILLED"
         }
     }
 }
