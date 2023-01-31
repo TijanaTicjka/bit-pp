@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Statistics</title>
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <header>
+            <h1>Exam statistic June</h1>
+            <h2>Total students: % count %</h2>
+            <div class="result">
+                <div class="passed">
+                    <p>PASSED</p>
+                    <div class="number"></div>
+                    <div class="procentage"></div>
+                </div>
+                <div class="falled">
+                    <p>FAILED</p>
+                    <div class="number1"></div>
+                    <div class="procentage1"></div>
+                </div>
+            </div>
+        </header>
+        <form action="">
+            <select name="" id="subject">
+                <option value="Choose subject">Choose subject</option>
+                <option value="Javascript">JavaScript</option>
+                <option value="PHP">PHP</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+            </select>
+            <input type="text" placeholder="Name surname" id="name">
+            <select name="" id="grade">
+                <option value="Grade">Grade</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <input type="button" value="ADD" id="add">
+        </form>
+    </div>
+    <div class="error"></div>
+    <div class="container">
+        <ul class="result-message-p"></ul>
+        <ul class="result-message-f"></ul>
+    </div>
+    <script src="./JS/data.js"></script>
+    <script src="./JS/ui.js"></script>
+    <script src="./JS/app.js"></script>
+</body>
+</html>

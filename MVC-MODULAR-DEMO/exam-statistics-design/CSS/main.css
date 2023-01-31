@@ -1,0 +1,171 @@
+header{
+    background: url(https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+h1{
+   color: white;
+}
+h2{
+   display: block;
+   width: 100%;
+   color: white;
+}
+.main{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.passed{
+    background-color: rgba(79, 178, 182, 0.897);
+    margin-bottom: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+.falled{
+    background-color: tomato;
+    margin-bottom: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+.result{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+#add{
+    width: 10%;
+    color:rgba(79, 178, 182, 0.897);
+    border-style: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: whitesmoke;
+    font-size: 20px;
+}
+#grade{
+    margin-left: 10px;
+    border-radius: 4px;
+    border-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(43, 40, 40);
+}
+#name{
+    width: 40%;
+    margin-left: 10px;
+    border-radius: 6px;
+    border-color:rgba(79, 178, 182, 0.897);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#subject{
+    border-radius: 4px;
+    border-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(43, 40, 40);
+}
+.error{
+    color: tomato;
+    margin: 0 auto;
+    width: 80%;
+    font-weight: bold;
+}
+.result-message-p{
+    list-style-type: none;
+    margin-left: 20%;
+    margin-top: 50px;
+    width: 50%;
+}
+.result-message-f{
+    list-style-type: none;
+    margin-right: 20%;
+    margin-top: 50px;
+    width: 50%;
+}
+.failed-li{
+    width: 100%;
+    color: tomato;
+    border-bottom: 1px solid gray; 
+}
+.passed-li{
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+.sub-name-p{
+    display: inline-flex;
+    width: 90%;
+}
+.grade-style-passed{
+    width: 9%;
+    display: inline-flex;
+    color: rgba(79, 178, 182, 0.897);
+    justify-content: right;
+}
+.sub-name-f{
+    display: inline-flex;
+    width: 90%;
+}
+.grade-style-failed{
+    width: 9%;
+    color:tomato;
+    display: inline-flex;
+    justify-content: right;
+}
+.container{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+.counterP{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    margin-right: 16%;
+}
+.counterF{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.procentageF{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.procentage2{
+    height:15px ;
+    font-size: 12px;
+    padding: 4px;
+    margin-top: 15px;
+    background-color: lightpink;
+    border: 1px solid pink;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+}
+body{
+    font-family:'Varela Round', sans-serif;
+    color: rgb(43, 40, 40);
+}
+
