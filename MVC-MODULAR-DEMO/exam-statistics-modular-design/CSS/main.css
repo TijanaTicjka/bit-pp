@@ -27,7 +27,7 @@ h2{
     margin-bottom: 20px;
     width: 60%;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
     border-radius: 5px;
 }
 .falled{
@@ -90,15 +90,13 @@ form{
 }
 .result-message-p{
     list-style-type: none;
-    margin-left: 20%;
     margin-top: 50px;
-    width: 50%;
+    width: 35%;
 }
 .result-message-f{
     list-style-type: none;
-    margin-right: 20%;
     margin-top: 50px;
-    width: 50%;
+    width: 35%;
 }
 .failed-li{
     width: 100%;
@@ -112,6 +110,7 @@ form{
 .sub-name-p{
     display: inline-flex;
     width: 90%;
+    justify-content: left;
 }
 .grade-style-passed{
     width: 9%;
@@ -122,6 +121,7 @@ form{
 .sub-name-f{
     display: inline-flex;
     width: 90%;
+    justify-content: left;
 }
 .grade-style-failed{
     width: 9%;
@@ -133,13 +133,14 @@ form{
     display: flex;
     width: 80%;
     margin: 0 auto;
+    justify-content: center;
 }
 .counterP{
     display: flex;
-    justify-content: center;
+    justify-content:center;
     flex-direction: column;
     color: white;
-    margin-right: 16%;
+    margin-right: 30%;
 }
 .counterF{
     display: flex;
@@ -154,18 +155,19 @@ form{
     color: white;
 }
 .procentage2{
-    height:15px ;
-    font-size: 12px;
+    font-size:0.8em;
     padding: 4px;
-    margin-top: 15px;
+    margin-top: 12px;
+    margin-bottom: 12px;
     background-color: lightpink;
     border: 1px solid pink;
     border-radius: 4px;
     color: white;
     display: flex;
+    justify-content: center;
+    width: 25%;
 }
 body{
     font-family:'Varela Round', sans-serif;
     color: rgb(43, 40, 40);
 }
-

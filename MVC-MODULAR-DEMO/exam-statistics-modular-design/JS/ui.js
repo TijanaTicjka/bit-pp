@@ -46,7 +46,7 @@ var uiModule = (function () {
         listP.appendChild(infoS);
         infoS.appendChild(infoG);
         infoS.style.borderBottom="1px solid gray";
-        infoS.style.height="40px";
+        infoS.style.padding="10px";
         var allLiP = document.getElementsByClassName("passed-li").length;
         numberOfPassed.textContent = allLiP;
         numberOfPassed.classList.add("counterP");
@@ -71,7 +71,7 @@ var uiModule = (function () {
         listF.appendChild(infoS);
         infoS.appendChild(infoG);
         infoS.style.borderBottom="1px solid gray";
-        infoS.style.height="40px";
+        infoS.style.padding="10px";
         var allLiF = document.getElementsByClassName("failed-li").length;
         numberOfFailed.textContent = allLiF;
         numberOfFailed.classList.add("counterF");
@@ -81,7 +81,7 @@ var uiModule = (function () {
     }
 
     var updateStatistic = function() {
-        var allLi = document.getElementsByTagName("li").length;
+        var allLi = document.getElementsByTagName("li").length/2;
         title.textContent = "Total students:" + " " + allLi;
         var allLiF = document.getElementsByClassName("failed-li").length;
         var p = 0;
