@@ -49,6 +49,7 @@ form{
     width: 100%;
     justify-content: center;
     background-color: whitesmoke;
+    flex-wrap: wrap;
 }
 #add{
     width: 10%;
@@ -105,6 +106,7 @@ form{
 }
 .passed-li{
     width: 100%;
+    color: rgba(79, 178, 182, 0.897);
     border-bottom: 1px solid gray;
 }
 .sub-name-p{
@@ -134,6 +136,7 @@ form{
     width: 80%;
     margin: 0 auto;
     justify-content: center;
+    background-color: rgb(240, 240, 224, 0.5);
 }
 .counterP{
     display: flex;
